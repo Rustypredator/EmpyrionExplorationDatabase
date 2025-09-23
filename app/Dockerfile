@@ -42,8 +42,7 @@ COPY ./Caddyfile /etc/caddy/Caddyfile
 # Install dependencies and build
 RUN cd /app && \
     composer install --no-dev --optimize-autoloader && \
-    bun install --prod && \
-    bun run build
+    bun install --prod
 
 # App image
 FROM base AS app
