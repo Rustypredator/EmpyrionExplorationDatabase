@@ -14,10 +14,6 @@
                                 <a href="{{ route('frontend.entry.show', $result) }}" class="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-600 font-bold">
                                     Entry: {{ $result->name }} ({{ ucfirst($result->type) }})
                                 </a>
-                            @elseif ($groupLabel === 'distances')
-                                <a href="{{ route('frontend.distance.show', $result) }}" class="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-600 font-bold">
-                                    Distance: {{ $result->name }} - {{ $result->value }} {{ $result->unit }}
-                                </a>
                             @endif
                     @endforeach
                 @endforeach
