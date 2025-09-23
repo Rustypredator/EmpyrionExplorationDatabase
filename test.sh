@@ -17,4 +17,4 @@ sudo docker container prune -f
 sudo docker builder prune -f
 echo "==============================================="
 echo "          Starting containers"
-sudo docker compose up  
+sudo docker compose up
