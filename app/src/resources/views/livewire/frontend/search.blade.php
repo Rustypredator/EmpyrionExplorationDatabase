@@ -1,7 +1,8 @@
 <div>
     <input type="text" wire:model.live="query" placeholder="Search..." class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded mb-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" />
-    <div id="results">
+    <div id="results" class="text-gray-500 dark:text-gray-400">
         @if($results)
+            <u>{{count($results['locations']) + count($results['entries'])}} results found</u>
             <ul class="space-y-2">
                 @foreach($results as $groupLabel => $group)
                     @foreach ($group as $result)
@@ -19,7 +20,7 @@
                 @endforeach
             </ul>
         @else
-            <p class="text-gray-500 dark:text-gray-400">No results found.</p>
+            <p>Search for anything above (3 characters minimum)</p>
         @endif
     </div>
 </div>
