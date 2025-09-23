@@ -37,8 +37,8 @@ services:
       context: app
       target: app
     restart: unless-stopped
-    expose:
-      - "80"
+    ports:
+      - "8888:80"
     environment:
       <<: *common-env
     volumes:
@@ -78,8 +78,6 @@ services:
   db:
     image: mariadb:latest
     restart: unless-stopped
-    expose:
-      - "3306"
     environment:
       MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-secret}
       MARIADB_DATABASE: ${MYSQL_DATABASE:-eedb}
@@ -115,8 +113,6 @@ services:
   search:
     image: getmeili/meilisearch:v1.14.0
     restart: unless-stopped
-    expose:
-        - "7700"
     environment:
       MEILI_MASTER_KEY: ${MEILISEARCH_KEY}
       TZ: ${TZ:-Europe/Berlin}
