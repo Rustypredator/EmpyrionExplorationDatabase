@@ -14,4 +14,3 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
 include __DIR__.'/Frontend/Location.php';
 include __DIR__.'/Frontend/Entry.php';
-include __DIR__.'/Frontend/Distance.php';

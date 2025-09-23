@@ -24,6 +24,21 @@
         <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Name</label>
         <input id="name" type="text" wire:model="name" value="{{$name}}" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" placeholder="Enter location name" />
     </div>
+    <!-- Three inputs for coordinates: x, y, z -->
+    <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex-1">
+            <label for="coordinate_x" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Coordinate X</label>
+            <input id="coordinate_x" type="number" step="0.01" wire:model="x" value="{{$x}}" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" placeholder="X" />
+        </div>
+        <div class="flex-1">
+            <label for="coordinate_y" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Coordinate Y</label>
+            <input id="coordinate_y" type="number" step="0.01" wire:model="y" value="{{$y}}" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" placeholder="Y" />
+        </div>
+        <div class="flex-1">
+            <label for="coordinate_z" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Coordinate Z</label>
+            <input id="coordinate_z" type="number" step="0.01" wire:model="z" value="{{$z}}" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500" placeholder="Z" />
+        </div>
+    </div>
     <!-- Textfield for description -->
     <div>
         <label for="description" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Description</label>
