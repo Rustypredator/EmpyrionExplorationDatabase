@@ -8,4 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: "172.18.226.152",
+        cors: {
+            origin: "*"
+        },
+        port: 3000,
+    }
 });
