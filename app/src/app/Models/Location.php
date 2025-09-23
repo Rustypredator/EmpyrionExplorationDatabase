@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
-use App\Models\Distance;
 use App\Models\Entry;
 use App\Models\Location;
 
