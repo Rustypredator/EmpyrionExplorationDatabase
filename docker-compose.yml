@@ -8,6 +8,8 @@ x-environment: &common-env
   # general
   APP_NAME: ${APP_NAME:-EmpyrionExplorationDatabase}
   APP_URL: ${APP_URL:-https://eedb.example.com}
+  # Sanctum
+  SANCTUM_STATEFUL_DOMAINS: ${SANCTUM_STATEFUL_DOMAINS:-''}
   # session
   SESSION_DRIVER: redis
   SESSION_DOMAIN: ${SESSION_DOMAIN:-null}
@@ -25,8 +27,14 @@ x-environment: &common-env
   SCOUT_QUEUE: true
   MEILISEARCH_HOST: http://search:7700
   # mail
-  SANCTUM_STATEFUL_DOMAINS: ${SANCTUM_STATEFUL_DOMAINS:-''}
+  MAIL_MAILER: ${MAIL_MAILER:-log}
+  MAIL_SCHEME: ${MAIL_SCHEME:-null}
+  MAIL_HOST: ${MAIL_HOST:-null}
+  MAIL_PORT: ${MAIL_PORT:-null}
+  MAIL_USERNAME: ${MAIL_USERNAME:-null}
   MAIL_PASSWORD: ${MAIL_PASSWORD:-null}
+  MAIL_FROM_ADDRESS: ${MAIL_FROM_ADDRESS:-null}
+  MAIL_FROM_NAME: ${MAIL_FROM_NAME:-'EEDB'}
   # time
   TZ: ${TZ:-Europe/Berlin}
   TIMEZONE: ${TZ:-Europe/Berlin}
