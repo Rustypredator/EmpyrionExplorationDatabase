@@ -27,4 +27,8 @@ if [ -f artisan ]; then
     php artisan scout:import "App\Models\Distance"
     
     echo "==============================================="
+
+    php artisan up
+    echo "        Laravel Setup Complete"
+    echo "==============================================="
 fi
