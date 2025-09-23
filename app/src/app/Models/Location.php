@@ -17,7 +17,10 @@ class Location extends Model
         'parent_id',
         'type',
         'name',
-        'properties',
+        'x',
+        'y',
+        'z',
+        'description',
     ];
 
     public function parent()
@@ -33,15 +36,5 @@ class Location extends Model
     public function entries()
     {
         return $this->hasMany(Entry::class, 'location_id');
-    }
-
-    public function distancesFrom()
-    {
-        return $this->hasMany(Distance::class, 'from_location_id');
-    }
-
-    public function distancesTo()
-    {
-        return $this->hasMany(Distance::class, 'to_location_id');
     }
 }
