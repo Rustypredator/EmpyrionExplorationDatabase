@@ -15,11 +15,13 @@
             <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div class="flex justify-between items-start">
                     <div>
-                        <small>{{ ucfirst($entry->type) }}:</small>&nbsp;<b>{{ $entry->name }}</b><br/>
+                        <small>Name:</small>&nbsp;<b>{{ $entry->name }}</b><br/>
+                        <small>Type:</small>&nbsp;{{ ucfirst($entry->type) }}<br/>
                         <small>Location:</small>&nbsp;
                         <a href="{{ route('frontend.location.show', $entry->location->id) }}" class="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-600 font-bold">
                             {{ $entry->location->name }}
                         </a><br/>
+                        <small>Coords:</small>&nbsp;{{ $entry->x ?? '-' }}, {{ $entry->y ?? '-' }}, {{ $entry->z ?? '-' }}<br/>
                     </div>
                     <!-- Top right: Timestamps -->
                     <div class="text-xs text-gray-400 dark:text-gray-500 text-right md:ml-4">
